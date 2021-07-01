@@ -196,7 +196,7 @@
         <footer class="footer">
             <p class="footer__title">MD Ahasan Habib</p>
             <div class="footer__social">
-                <a href="https://m.me/habib_ahsan0" class="footer__icon"><i class='bx bxl-messenger' ></i></a>
+                <a href="https://m.me/habib.ahsan0" class="footer__icon"><i class='bx bxl-messenger' ></i></a>
                 <a href="https://instagram.com/habib_ahsan0" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
                 <a href="https://twitter.com/habib_vhai" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
@@ -210,5 +210,34 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        
+        <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "1622077844605601");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+        
     </body>
 </html>
